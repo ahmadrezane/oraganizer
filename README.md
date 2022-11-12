@@ -1,2 +1,3 @@
 # oraganizer
-organization directory
+organization a directory based on file extentions
+
