@@ -18,7 +18,7 @@ class oraganizer:
         if not self.directory.exists():
             raise FileNotFoundError(f'{self.directory} not found')
         self.file_type_dir = read_json(DATA_DIR / 'extensions_data.json')
-           
+
     def __call__(self):
         for file in self.directory.iterdir():
             ex = file.suffix.replace('.', '')
@@ -29,8 +29,9 @@ class oraganizer:
                 DEST_DIR.mkdir(exist_ok=TRUE)
                 shutil.move(str(file), str(DEST_DIR))
                 print(f'{file.name}  ----->>  {DEST_DIR}')
-                
 
 
-h = oraganizer('/mnt/d')
-h()
+if __name__ == '__main__':
+
+    h = oraganizer('/mnt/d')
+    h()
