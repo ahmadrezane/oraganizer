@@ -33,5 +33,5 @@ class oraganizer:
 
 if __name__ == '__main__':
 
-    h = oraganizer('/mnt/d')
-    h()
+    organize = oraganizer('/mnt/d')
+    organize()
